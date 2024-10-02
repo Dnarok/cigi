@@ -5,6 +5,9 @@ project(tests
 
 add_executable(default_test
 	default_test.cpp
+	host_packets.cpp
+	ig_packets.cpp
+	other.cpp
 )
 target_link_libraries(default_test
 	PRIVATE ${MY_PROJECT_NAME}
