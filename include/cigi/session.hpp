@@ -123,7 +123,8 @@ namespace cigi
             return std::async(launch, [&]()
             {
                 using namespace std::chrono_literals;
-                while (true)
+                auto start = std::chrono::system_clock::now();
+                while (std::chrono::system_clock::now() - start < 10s)
                 {
                     if (poll(1'000us))
                     {
@@ -133,6 +134,8 @@ namespace cigi
                         }
                     }
                 }
+
+                return T{};
             });
         };
     };
