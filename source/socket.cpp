@@ -14,8 +14,8 @@
 #   include <netdb.h>
 #   include <unistd.h>
 #   include <errno.h>
-#   include <sys.h>
 #   include <cstring>
+#   include <atomic>
 #   define CLOSE_SOCKET ::close
 #   define IOCTL_SOCKET ::ioctl
 using SOCKET = int;
