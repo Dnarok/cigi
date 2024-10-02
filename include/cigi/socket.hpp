@@ -4,6 +4,7 @@
 #include <cstdint>
 #include <span>
 #include <chrono>
+#include <memory>
 
 namespace cigi
 {
