@@ -1,6 +1,7 @@
 #pragma once
 
 #include "general.hpp"
+#include <bit>
 
 namespace cigi
 {

@@ -158,17 +158,17 @@ namespace cigi
         union pointer
         {
             std::byte* base = nullptr;
-            octet* octet;
-            u8* u8;
-            s8* s8;
-            u16* u16;
-            s16* s16;
-            u32* u32;
-            s32* s32;
-            u64* u64;
-            s64* s64;
-            f32* f32;
-            f64* f64;
+            octet* _octet;
+            u8* _u8;
+            s8* _s8;
+            u16* _u16;
+            s16* _s16;
+            u32* _u32;
+            s32* _s32;
+            u64* _u64;
+            s64* _s64;
+            f32* _f32;
+            f64* _f64;
         };
 
         serialized_data() :
@@ -244,113 +244,113 @@ namespace cigi
 
         auto operator <<(const octet& value) -> serialized_data&
         {
-            *p.octet++ = value;
+            *p._octet++ = value;
             return *this;
         };
         auto operator <<(const u8& value) -> serialized_data&
         {
-            *p.u8++ = value;
+            *p._u8++ = value;
             return *this;
         };
         auto operator <<(const s8& value) -> serialized_data&
         {
-            *p.s8++ = value;
+            *p._s8++ = value;
             return *this;
         };
         auto operator <<(const u16& value) -> serialized_data&
         {
-            *p.u16++ = value;
+            *p._u16++ = value;
             return *this;
         };
         auto operator <<(const s16& value) -> serialized_data&
         {
-            *p.s16++ = value;
+            *p._s16++ = value;
             return *this;
         };
         auto operator <<(const u32& value) -> serialized_data&
         {
-            *p.u32++ = value;
+            *p._u32++ = value;
             return *this;
         };
         auto operator <<(const s32& value) -> serialized_data&
         {
-            *p.s32++ = value;
+            *p._s32++ = value;
             return *this;
         };
         auto operator <<(const u64& value) -> serialized_data&
         {
-            *p.u64++ = value;
+            *p._u64++ = value;
             return *this;
         };
         auto operator <<(const s64& value) -> serialized_data&
         {
-            *p.s64++ = value;
+            *p._s64++ = value;
             return *this;
         };
         auto operator <<(const f32& value) -> serialized_data&
         {
-            *p.f32++ = value;
+            *p._f32++ = value;
             return *this;
         };
         auto operator <<(const f64& value) -> serialized_data&
         {
-            *p.f64++ = value;
+            *p._f64++ = value;
             return *this;
         };
 
         auto operator >>(octet& value) -> serialized_data&
         {
-            value = *p.octet++;
+            value = *p._octet++;
             return *this;
         };
         auto operator >>(u8& value) -> serialized_data&
         {
-            value = *p.u8++;
+            value = *p._u8++;
             return *this;
         };
         auto operator >>(s8& value) -> serialized_data&
         {
-            value = *p.s8++;
+            value = *p._s8++;
             return *this;
         };
         auto operator >>(u16& value) -> serialized_data&
         {
-            value = *p.u16++;
+            value = *p._u16++;
             return *this;
         };
         auto operator >>(s16& value) -> serialized_data&
         {
-            value = *p.s16++;
+            value = *p._s16++;
             return *this;
         };
         auto operator >>(u32& value) -> serialized_data&
         {
-            value = *p.u32++;
+            value = *p._u32++;
             return *this;
         };
         auto operator >>(s32& value) -> serialized_data&
         {
-            value = *p.s32++;
+            value = *p._s32++;
             return *this;
         }; 
         auto operator >>(u64& value) -> serialized_data&
         {
-            value = *p.u64++;
+            value = *p._u64++;
             return *this;
         };
         auto operator >>(s64& value) -> serialized_data&
         {
-            value = *p.s64++;
+            value = *p._s64++;
             return *this;
         };
         auto operator >>(f32& value) -> serialized_data&
         {
-            value = *p.f32++;
+            value = *p._f32++;
             return *this;
         };
         auto operator >>(f64& value) -> serialized_data&
         {
-            value = *p.f64++;
+            value = *p._f64++;
             return *this;
         };
 
