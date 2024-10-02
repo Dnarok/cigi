@@ -22,12 +22,6 @@ target_include_directories(${MY_PROJECT_NAME}
     PUBLIC include
 )
 
-target_link_libraries(${MY_PROJECT_NAME}
-    PUBLIC spdlog::spdlog
-    PUBLIC fmt::fmt
-    PUBLIC contract::contract
-)
-
 if(BUILD_TESTS)
     enable_testing()
     add_subdirectory(test)
