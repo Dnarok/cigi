@@ -23,11 +23,11 @@ namespace cigi
             f32 v = 0.f;
         };
 
-        constexpr symbol_line_definition() = default;
-        constexpr symbol_line_definition(const symbol_line_definition&) = default;
-        constexpr symbol_line_definition(symbol_line_definition&&) noexcept = default;
-        constexpr ~symbol_line_definition() = default;
-        constexpr auto operator =(const symbol_line_definition& other) -> symbol_line_definition&
+        symbol_line_definition() = default;
+        symbol_line_definition(const symbol_line_definition&) = default;
+        symbol_line_definition(symbol_line_definition&&) noexcept = default;
+        ~symbol_line_definition() = default;
+        auto operator =(const symbol_line_definition& other) -> symbol_line_definition&
         {
             symbol_id = other.symbol_id;
             primitive_type = other.primitive_type;

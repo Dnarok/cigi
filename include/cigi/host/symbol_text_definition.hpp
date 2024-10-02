@@ -47,11 +47,11 @@ namespace cigi
             monospace_serif_bold_italic = 16,
         };
 
-        constexpr symbol_text_definition() = default;
-        constexpr symbol_text_definition(const symbol_text_definition&) = default;
-        constexpr symbol_text_definition(symbol_text_definition&&) noexcept = default;
-        constexpr ~symbol_text_definition() = default;
-        constexpr auto operator =(const symbol_text_definition& other) -> symbol_text_definition&
+        symbol_text_definition() = default;
+        symbol_text_definition(const symbol_text_definition&) = default;
+        symbol_text_definition(symbol_text_definition&&) noexcept = default;
+        ~symbol_text_definition() = default;
+        auto operator =(const symbol_text_definition& other) -> symbol_text_definition&
         {
             symbol_id = other.symbol_id;
             alignment = other.alignment;

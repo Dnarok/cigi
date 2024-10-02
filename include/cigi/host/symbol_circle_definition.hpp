@@ -22,11 +22,11 @@ namespace cigi
             bounded<f32, 0.f, 360.f> end_angle = 0.f;
         };
 
-        constexpr symbol_circle_definition() = default;
-        constexpr symbol_circle_definition(const symbol_circle_definition&) = default;
-        constexpr symbol_circle_definition(symbol_circle_definition&&) noexcept = default;
-        constexpr ~symbol_circle_definition() = default;
-        constexpr auto operator =(const symbol_circle_definition& other) -> symbol_circle_definition&
+        symbol_circle_definition() = default;
+        symbol_circle_definition(const symbol_circle_definition&) = default;
+        symbol_circle_definition(symbol_circle_definition&&) noexcept = default;
+        ~symbol_circle_definition() = default;
+        auto operator =(const symbol_circle_definition& other) -> symbol_circle_definition&
         {
             symbol_id = other.symbol_id;
             drawing_style = other.drawing_style;

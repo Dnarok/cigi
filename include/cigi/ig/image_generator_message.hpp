@@ -7,13 +7,15 @@ namespace cigi
     // VERSION 3.3, see CIGI ICD v3.3 § 4.2.17
     struct alignas(std::uint64_t) image_generator_message
     {
-        constexpr image_generator_message() = default;
-        constexpr image_generator_message(const image_generator_message&) = default;
-        constexpr image_generator_message(image_generator_message&&) noexcept = default;
-        constexpr ~image_generator_message() = default;
-        constexpr auto operator =(const image_generator_message& other) -> image_generator_message&
+        image_generator_message() = default;
+        image_generator_message(const image_generator_message&) = default;
+        image_generator_message(image_generator_message&&) noexcept = default;
+        ~image_generator_message() = default;
+        auto operator =(const image_generator_message& other) -> image_generator_message&
         {
-
+            message_id = other.message_id;
+            octets = other.octets;
+            packet_size = other.packet_size;
 
             return *this;
         };
