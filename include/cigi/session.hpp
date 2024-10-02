@@ -5,6 +5,7 @@
 
 #include <map>
 #include <future>
+#include <optional>
 
 namespace cigi
 {

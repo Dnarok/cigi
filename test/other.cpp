@@ -2,6 +2,7 @@
 #include "cigi/host/symbol_text_definition.hpp"
 
 #include <iostream>
+#include <thread>
 
 #include <gtest/gtest.h>
 
@@ -23,7 +24,7 @@ TEST(other, test_network)
     session.connect("127.255.255.255", 34567, 34567);
     session.write(std1);
 
-    std::jthread writethread
+    std::jthread write_thread
     {
         [&session, &std1]()
         {
