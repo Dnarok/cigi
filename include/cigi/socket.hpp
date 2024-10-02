@@ -5,6 +5,7 @@
 #include <span>
 #include <chrono>
 #include <memory>
+#include <vector>
 
 namespace cigi
 {
