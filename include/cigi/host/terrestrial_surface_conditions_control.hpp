@@ -5,7 +5,7 @@
 namespace cigi
 {
     // VERSION 3.3, see CIGI ICD v3.3 § 4.1.15
-    struct alignas(std::uint64_t) alignas(std::uint32_t) terrestrial_surface_conditions_control
+    struct alignas(std::uint64_t) terrestrial_surface_conditions_control
     {
         constexpr terrestrial_surface_conditions_control() = default;
         constexpr terrestrial_surface_conditions_control(const terrestrial_surface_conditions_control&) = default;

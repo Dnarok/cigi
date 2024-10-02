@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.30)
 
-set(CMAKE_CXX_STANDARD 23)
-
 set(MY_PROJECT_NAME cigi)
 project(
     ${MY_PROJECT_NAME}
@@ -77,6 +75,9 @@ add_library(${MY_PROJECT_NAME}
 target_include_directories(${MY_PROJECT_NAME} 
     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/cigi>
            $<BUILD_LOCAL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+)
+target_compile_features(${MY_PROJECT_NAME}
+    PUBLIC cxx_std_23
 )
 
 if(BUILD_TESTS)
